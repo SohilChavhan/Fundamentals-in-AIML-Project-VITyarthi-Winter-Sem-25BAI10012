@@ -48,5 +48,9 @@ model.fit(X_train, Y_train, categorical_feature=categorical_cols)
 y_pred = model.predict(X_test)
 print("Final MAE:", mean_absolute_error(Y_test, y_pred))
 print("Final R2 Score:", r2_score(Y_test, y_pred))           
-
+# Top 10 most important features
+ltb.plot_importance(model, max_num_features=10, importance_type='gain', figsize=(10, 6), color='teal')
+plt.title("The Top 10 Drivers of Retail Sales")
+plt.tight_layout()
+plt.show()  
  
