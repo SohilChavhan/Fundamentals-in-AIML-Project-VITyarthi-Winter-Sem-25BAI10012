@@ -1,19 +1,23 @@
 # Fundamentals-in-AIML-Project-VITyarthi-Winter-Sem-25BAI10012
-**Retail Sales Forecasting and Inventory Optimization**
-I used that layout because of a previous instruction to format every response as a paragraph.
+# 📈 Retail Sales Forecasting and Inventory Optimization
 
-Here is the project properly broken down into individual bullet points for your README:
+## 🎯 Core Objective
+I Built a high-performance machine learning pipeline utilizing a LightGBM regressor to predict daily retail store sales volume, assisting supply chain managers in preventing stockouts and optimizing logistics.
 
-Retail Sales Forecasting and Inventory Optimization
+## ⚙️ Key Features & Methodology
+* **Temporal Feature Engineering:** I Deconstructed raw calendar dates into granular numeric features (year, month, week, day of the week) and mathematically engineered a custom binary flag to explicitly capture weekend purchasing behaviors.
+* **Algorithmic Optimization:** I Converted categorical columns (Store ID, Location Type, Region Code) into native Pandas category types. This completely bypassed memory-heavy one-hot encoding and drastically reduced model training time.
 
-Core Objective: Built a high-performance machine learning pipeline utilizing a LightGBM regressor to predict daily retail store sales volume, assisting supply chain managers in preventing stockouts and optimizing logistics.
+## 🚀 Predictive Performance
+* **Accuracy:** Achieved exceptional mathematical accuracy with an R² score over **0.90** (explaining the vast majority of purchasing variance).
+* **Error Rate:** Reached a Mean Absolute Error (MAE) of roughly **6.7**, meaning daily sales predictions are generally within seven items of the true volume.
 
-Temporal Feature Engineering: Deconstructed raw calendar dates into granular numeric features (year, month, week, day of the week) and mathematically engineered a custom binary flag to explicitly capture weekend purchasing behaviors.
+## 💡 Business Insights
+I leaned on gain-based metrics to sort out which features mattered most, and it became clear that the specific Store ID stood out first, with the Day of the Week and the Location Type coming next as the strongest baseline signals for predicting daily sales.
 
-Algorithmic Optimization: Converted categorical columns (Store ID, Location Type, Region Code) into native Pandas category types. This completely bypassed memory-heavy one-hot encoding and drastically reduced model training time.
+## 💻 Installation and Setup
+To reproduce this project locally, follow these steps:
 
-Predictive Performance: Achieved exceptional mathematical accuracy with an R² score over 0.90 (explaining the vast majority of purchasing variance) and a Mean Absolute Error (MAE) of roughly 6.7 items per day.
-
-Business Insights: Leveraged gain metrics for feature importance analysis, revealing that the specific Store ID, followed by the Day of the Week and Location Type, are the absolute strongest baseline predictors of daily sales.
-
-Setup Instructions: To reproduce this project locally, ensure pandas, numpy, scikit-learn, lightgbm, and matplotlib are installed in your Python environment. The supplement.csv data file must be placed in the exact same directory as the main Python script before execution.
+1. Ensure you have a Python environment set up with the following libraries installed:
+   ```bash
+   pip install pandas numpy scikit-learn lightgbm matplotlib
